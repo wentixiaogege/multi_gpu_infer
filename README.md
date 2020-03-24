@@ -13,7 +13,7 @@ It contains the following modules:
     
 使用GPU infer 加速！！！，本repo实现了两种方式：
 1. 基于队列的multiprocessing 模块 
-2. 基于命令的subprocess 模型 
+2. 基于命令的subprocess 模块
     - 2.1 本地模式，gpu本地不可访问，需要特殊的命令申请gpu资源 
     - 2.2 集群模型，gpu本地可以访问，意思就是你在集群中执行了；
 
