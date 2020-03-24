@@ -25,8 +25,9 @@ $ chinese_L-12_H-768_A-12
 2. install all necessray packaegs
 
 ### 1. queue-based multiprocessing 使用基于Queue的多进程GPU预测
-python queue.py
-运行日志 ==>
+python test.queue.py
+
+运行日志 ================================================================================================================>
 model init done 1
 WARNING:tensorflow:From /data/anaconda3/envs/py37/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
 
@@ -58,9 +59,9 @@ checking the final result using multiprocessing     worker  id             conte
 
 
 ### 2.cmd-based subprocessing 使用基于CMD的多进程GPU预测
-python cmd.py
+python test_cmd.py
 
-运行日志 ==>可以看到启动了两个worker
+运行日志 ======================================================================================>可以看到启动了两个worker
 saving part 1 (500, 2)
 /data/anaconda3/envs/py37/lib/python3.7/site-packages/pandas/core/generic.py:2530: PerformanceWarning: 
 your performance may suffer as PyTables will pickle object types that it cannot
