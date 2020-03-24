@@ -9,32 +9,33 @@ It contains the following modules:
     2.1 running locally, every time fetch one gpu, this way is better for fire command to the cluster 
     2.2 running cluster, one time gather all gpus you can ,then running the basci command;
     
-使用多GPU infer时候加速
-本文实现了两种方式
-1.基于队列的multiprocessing 模块
-2.基于命令的subprocess 模型
-  2.1 本地模式，gpu本地不可访问，需要特殊的命令申请gpu资源
-  2.2 集群模型，gpu本地可以访问，意思就是你在集群中执行了；
-    
+使用GPU infer 加速！！！，本repo实现了两种方式：
+1. 基于队列的multiprocessing 模块 
+2. 基于命令的subprocess 模型 
+    2.1 本地模式，gpu本地不可访问，需要特殊的命令申请gpu资源 
+    2.2 集群模型，gpu本地可以访问，意思就是你在集群中执行了；
+
+
 ## Requirements
 
-$ multiprocessing
-$ subprocess
-$ python3.7
-$ keras_bert
-$ argparse
-$ pandas
-$ chinese_L-12_H-768_A-12
+* multiprocessing
+* subprocess
+* python3.7
+* keras_bert
+* argparse
+* pandas
+* chinese_L-12_H-768_A-12
 
 
-## 本文以keras_bert 提供的extract_embeddings 方式来讲解如何使用；
+##### 本文以keras_bert 提供的extract_embeddings 方式来讲解如何使用；
 1. download chinese_L-12_H-768_A-12 at [checkpoint] path
 2. install all necessray packaegs
 
-### 1. queue-based multiprocessing 使用基于Queue的多进程GPU预测
-python test.queue.py
+##### 1. queue-based multiprocessing 使用基于Queue的多进程GPU预测
+* python queue.py
 
-运行日志 ================================================================================================================>
+* 运行日志:
+```javascript
 model init done 1
 WARNING:tensorflow:From /data/anaconda3/envs/py37/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
 
@@ -62,13 +63,14 @@ checking the final result using multiprocessing     worker  id             conte
 2       1   2              [方便携带]  [[-0.7382355, -0.039685342, -0.8000674, 0.6148...
 3       0   3              [包装很好]  [[-0.06756385, 0.60894394, -0.41646048, 0.2603...
 4       1   4  [口感俱佳, 风味十足, 酸甜可口]  [[-0.15814807, 0.51882, -1.1301757, 0.13116539...
-
+```
 
 
 ### 2.cmd-based subprocessing 使用基于CMD的多进程GPU预测
-python test_cmd.py
+* python test_cmd.py
 
-运行日志 ======================================================================================>可以看到启动了两个worker
+* 运行日志
+```javascript
 saving part 1 (500, 2)
 /data/anaconda3/envs/py37/lib/python3.7/site-packages/pandas/core/generic.py:2530: PerformanceWarning: 
 your performance may suffer as PyTables will pickle object types that it cannot
@@ -117,3 +119,4 @@ checking the final result using multiprocessing     id             content      
 2   2              [方便携带]  [[-0.73823625, -0.03968448, -0.80006707, 0.614...
 3   3              [包装很好]  [[-0.06756356, 0.6089444, -0.41645902, 0.26038...
 4   4  [口感俱佳, 风味十足, 酸甜可口]  [[-0.15814593, 0.51881766, -1.1301773, 0.13116...
+```
