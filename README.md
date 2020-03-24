@@ -1,4 +1,4 @@
-## Please start if helpful
+## Please star if helpful
 
 ## MULTI_GPU_INFER
 
