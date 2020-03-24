@@ -1,3 +1,5 @@
+## Please start if helpful
+
 # MULTI_GPU_INFER
 
 Using Multipule GPU to do infer for accelerate !!!!
@@ -6,14 +8,14 @@ It contains the following modules:
 
 1. Queue-Based multiprocessing model for inferring
 2. Subprocess model for commandline running:
-    2.1 running locally, every time fetch one gpu, this way is better for fire command to the cluster 
-    2.2 running cluster, one time gather all gpus you can ,then running the basci command;
+    - 2.1 running locally, every time fetch one gpu, this way is better for fire command to the cluster 
+    - 2.2 running cluster, one time gather all gpus you can ,then running the basci command;
     
 使用GPU infer 加速！！！，本repo实现了两种方式：
 1. 基于队列的multiprocessing 模块 
 2. 基于命令的subprocess 模型 
-    2.1 本地模式，gpu本地不可访问，需要特殊的命令申请gpu资源 
-    2.2 集群模型，gpu本地可以访问，意思就是你在集群中执行了；
+    - 2.1 本地模式，gpu本地不可访问，需要特殊的命令申请gpu资源 
+    - 2.2 集群模型，gpu本地可以访问，意思就是你在集群中执行了；
 
 
 ## Requirements
