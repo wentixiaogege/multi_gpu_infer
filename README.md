@@ -1,6 +1,6 @@
 ## Please start if helpful
 
-# MULTI_GPU_INFER
+## MULTI_GPU_INFER
 
 Using Multipule GPU to do infer for accelerate !!!!
 
@@ -29,11 +29,11 @@ It contains the following modules:
 * chinese_L-12_H-768_A-12
 
 
-##### 本文以keras_bert 提供的extract_embeddings 方式来讲解如何使用；
+### 本文以keras_bert 提供的extract_embeddings 方式来讲解如何使用；
 1. download chinese_L-12_H-768_A-12 at [checkpoint] path
 2. install all necessray packaegs
 
-##### 1. queue-based multiprocessing 使用基于Queue的多进程GPU预测
+#### 1. queue-based multiprocessing 使用基于Queue的多进程GPU预测
 * python queue.py
 
 * 运行日志:
@@ -68,7 +68,7 @@ checking the final result using multiprocessing     worker  id             conte
 ```
 
 
-### 2.cmd-based subprocessing 使用基于CMD的多进程GPU预测
+#### 2.cmd-based subprocessing 使用基于CMD的多进程GPU预测
 * python test_cmd.py
 
 * 运行日志
