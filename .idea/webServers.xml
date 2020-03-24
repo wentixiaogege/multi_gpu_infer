@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ab5b2343-ec92-4dcf-9d57-129725a4d48d" name="brain" url="http://base.lijingjie.ws2.hh-b.brainpp.cn">
+        <fileTransfer host="base.lijingjie.ws2.hh-b.brainpp.cn" port="22" privateKey="C:\Users\lijingjie\Downloads\id_rsa" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
