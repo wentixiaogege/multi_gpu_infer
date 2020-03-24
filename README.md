@@ -32,6 +32,10 @@ It contains the following modules:
 ### 本文以keras_bert 提供的extract_embeddings 方式来讲解如何使用；
 1. download chinese_L-12_H-768_A-12 at [checkpoint] path https://storage.googleapis.com/bert_models/2018_11_03/chinese_L-12_H-768_A-12.zip)
 2. install all necessray packaegs
+```angular2html
+$ cd multi_gpu_infer
+$ python3 setup.py build develop
+```
 
 #### 1. queue-based multiprocessing 使用基于Queue的多进程GPU预测
 * python queue.py
